@@ -1,0 +1,18 @@
+<div class="text-success panel text-center" ng-bind-html="summary"></div>
+
+<div class="embed-responsive embed-responsive-4by3">
+	<iframe 
+		ng-if="embedUrl"
+		width="560"
+		height="315" 
+		ng-src="{{ embedUrl }}" 
+		frameborder="0" 
+		allowfullscreen>
+	</iframe>
+</div>
+
+	<button 
+		class="btn btn-primary btn-xs"
+		ng-repeat="tag in tags">
+		{{ tag }}
+	</button>

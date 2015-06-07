@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Web Dev Talks</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Afaq Tariq">
+		<meta name="description" content="Webapp of Web Development talks from around the web.">
+
+		<!-- Angular.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body ng-app="webDevTalks" ng-controller="mainCtrl" class="container">
+		
+		<div class="page-header text-center">
+		  <h1>Web Development Talks</h1>
+		</div>
+
+		<div class="row">
+
+			<current-video 
+				class="col-md-7 pull-left"
+				ng-model="currentTalk" 
+				ng-if="currentTalk">
+			</current-video>
+
+			<talk-list class="col-md-4 pull-right"></talk-list>
+			
+			<div ng-if="!currentTalk" class="lead text-center">
+				Loading	Video...
+			</div>
+		</div>
+
+	</body>
+</html>

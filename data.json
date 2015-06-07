@@ -1,0 +1,34 @@
+[
+	{
+		"id": "kKj00HzElbk",
+		"type": "youtube",
+		"summary": "<b>Yunong Xiao</b> of Netflix discusses several strategies on logging for Node.js Applications",
+		"tags": [
+			"Node.js",
+			"Logs",
+			"Netflix"
+		],
+		"slides": "http://www.slideshare.net/yunongx/observable-applications-baynode-march-2014",
+		"demo": "https://github.com/yunong/demo"
+	},
+	{
+		"id": "rT-1ZxhjzBw",
+		"type": "youtube",
+		"summary": "<b>Tim Caswell</b> of Rackspace shows us some intriguing uses for ES6 Generators.",
+		"tags": [
+			"ES6",
+			"Generators",
+			"Powered by JavaScript Conference"
+		]
+	},
+	{
+		"id": "YhcOeJP06Zc",
+		"type": "youtube",
+		"summary": "<b>David East</b> of Google walks us through some basic code demos and terminology for Angular.js 2.0 code.",
+		"tags": [
+			"Angular.js",
+			"",
+			"ng-vegas Conference"
+		]
+	}
+]
