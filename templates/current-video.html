@@ -1,8 +1,20 @@
-<div class="text-success panel text-center" ng-bind-html="summary"></div>
+<style>
+	iframe {
+		-webkit-transition: all 500ms ease-out 1s;
+		-moz-transition: all 500ms ease-out 1s;
+		-o-transition: all 500ms ease-out 1s;
+		transition: all 500ms ease-out 1s;
+	}
+</style>
+<div class="muted text-center">
+	<strong>Tags:</strong>
+	<small ng-repeat="tag in tags">{{ tag }} {{ ($last) ? '' : ', ' }} </small>
+</div>
 
 <div class="embed-responsive embed-responsive-4by3">
-	<iframe 
+	<iframe
 		ng-if="embedUrl"
+		ng-hide="hideVideo"
 		width="560"
 		height="315" 
 		ng-src="{{ embedUrl }}" 
@@ -11,8 +23,3 @@
 	</iframe>
 </div>
 
-	<button 
-		class="btn btn-primary btn-xs"
-		ng-repeat="tag in tags">
-		{{ tag }}
-	</button>

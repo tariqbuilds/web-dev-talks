@@ -27,8 +27,37 @@
 		"summary": "<b>David East</b> of Google walks us through some basic code demos and terminology for Angular.js 2.0 code.",
 		"tags": [
 			"Angular.js",
-			"",
 			"ng-vegas Conference"
+		]
+	},
+	{
+		"id": "rOC2Hm2HTro",
+		"type": "youtube",
+		"summary": "<b>Stephen Fluin</b> quickly runs down use-cases and guidelines for building mobile applications as Chrome Cordova Apps.",
+		"tags": [
+			"Angular.js",
+			"Chrome Apps",
+			"Mobile Apps"
+		]
+	},
+	{
+		"id": "_mu6BWsnaPM",
+		"type": "youtube",
+		"summary": "<b><a class=\"text-info\" href='https://github.com/Urigo'>Uri Goldshtein</a></b> gives an enthusiastic talk on using <a class=\"text-info\" href='https://github.com/Urigo/angular-meteor'>angular-meteor</a> and demos a basic \"party\" application.",
+		"tags": [
+			"Angular.js",
+			"Meteor"
+		]
+	},
+	{
+		"id": "OE02JXX1VEM",
+		"type": "youtube",
+		"summary": "<b>Jafar Husain</b> and <b>Michael Paulson</b> of Netflix show off Falcor, an innovative data access layer which challenges traditional MVC architecture.",
+		"tags": [
+			"Angular.js",
+			"Falcor",
+			"Node",
+			"Netflix"
 		]
 	}
 ]

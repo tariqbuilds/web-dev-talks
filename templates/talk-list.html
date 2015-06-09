@@ -1,8 +1,16 @@
+<style>
+	.list-group-item {
+		-webkit-transition: background 0.1s ease-in-out;
+		-moz-transition: background 0.1s ease-in-out;
+		-o-transition: background 0.1s ease-in-out;
+		transition: background 0.1s ease-in-out;
+	}
+</style>
 <div class="list-group">
   	<a
   		class="list-group-item"
   		href="#"
-  		ng-class="{ 'active has-warning': searchText.length }"
+  		ng-class="{ 'has-warning': searchText.length }"
 		>
 		<h4 class="list-group-item-heading lead">Search </h4>
 		<p class="list-group-item-text">

@@ -14,7 +14,7 @@ app.service('Data', function ($http, $sce) {
 
 });
 
-app.directive('currentVideo', function ($sce, Data) {
+app.directive('currentVideo', function ($sce, $timeout, Data) {
 	return {
 		restrict: 'E',
 		scope: {
@@ -23,6 +23,7 @@ app.directive('currentVideo', function ($sce, Data) {
 		require: 'ngModel',
 		templateUrl: 'templates/current-video.html',
 		link: function (scope, el, attrs, ngModel) {
+
 			var videoTypes = {
 				'youtube': 'https://www.youtube.com/embed/',
 			};
@@ -36,10 +37,13 @@ app.directive('currentVideo', function ($sce, Data) {
 			];
 
 			ngModel.$render = function () {
-				console.log(ngModel.$viewValue);
+				scope.hideVideo = true;
 				scope.embedUrl = $sce.trustAsResourceUrl(videoTypes[ngModel.$modelValue.type] + ngModel.$modelValue.id);
-				scope.summary = Data.parseTalkSummaryAsHTML(ngModel.$modelValue.summary);
 				scope.tags = ngModel.$modelValue.tags;
+
+				$timeout(function () {
+					scope.hideVideo = false;
+				});
 			};
 
 			scope.getRandomLabel = function () {
