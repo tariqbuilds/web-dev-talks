@@ -8,7 +8,7 @@
 </style>
 <div class="list-group">
   	<a
-  		class="list-group-item"
+  		class="list-group-item row"
   		href="#"
   		ng-class="{ 'has-warning': searchText.length }"
 		>
@@ -19,20 +19,17 @@
   	</a>
 
 	<a 
-		class="list-group-item" 
+		class="list-group-item row" 
 		ng-class="{ 'active': currentTalk.id === talk.id }"
 		ng-click="changeCurrentTalk($index)" 
-		ng-repeat="talk in talks | filter:searchText">
+		ng-repeat="talk in talks | filter:searchText | limitTo: 8">
 		
-		<h4 class="list-group-item-heading">
-			{{ talk.title }}
-		</h4>
-		
-		<p 
+		<img class="pull-left img img-polaroid col-md-4" ng-src="{{ getThumbnail(talk.id) }}">
+
+		<div class="col-md-8"
 			class="list-group-item-text" 
 			ng-bind-html="parseSummary(talk.summary)">
-		</p>
-
+		</div>
 	</a>
 
 </div>

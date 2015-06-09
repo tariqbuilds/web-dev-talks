@@ -12,6 +12,13 @@ app.service('Data', function ($http, $sce) {
 		return $sce.trustAsHtml(summary);
 	};
 
+	this.getThumbnail = function (videoId) {
+		return 'http://img.youtube.com/vi/' + videoId + '/1.jpg';
+	};
+
+	this.getEmbedUrl = function (videoId) {
+		return 'https://www.youtube.com/embed/' + videoId;
+	};
 });
 
 app.directive('currentVideo', function ($sce, $timeout, Data) {
@@ -24,10 +31,6 @@ app.directive('currentVideo', function ($sce, $timeout, Data) {
 		templateUrl: 'templates/current-video.html',
 		link: function (scope, el, attrs, ngModel) {
 
-			var videoTypes = {
-				'youtube': 'https://www.youtube.com/embed/',
-			};
-
 			var labels = [
 				'default',
 				'danger',
@@ -38,12 +41,12 @@ app.directive('currentVideo', function ($sce, $timeout, Data) {
 
 			ngModel.$render = function () {
 				scope.hideVideo = true;
-				scope.embedUrl = $sce.trustAsResourceUrl(videoTypes[ngModel.$modelValue.type] + ngModel.$modelValue.id);
+				scope.embedUrl = $sce.trustAsResourceUrl(Data.getEmbedUrl(ngModel.$modelValue.id));
 				scope.tags = ngModel.$modelValue.tags;
 
 				$timeout(function () {
 					scope.hideVideo = false;
-				});
+				}, 750);
 			};
 
 			scope.getRandomLabel = function () {
@@ -67,6 +70,8 @@ app.directive('talkList', function ($sce, Data) {
 			scope.changeCurrentTalk = function (index) {
 				scope.currentTalk = scope.talks[index];
 			};
+
+			scope.getThumbnail = Data.getThumbnail;
 
 			Data.getTalks().then(function (talks) {
 				scope.talks = talks;
