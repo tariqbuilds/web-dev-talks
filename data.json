@@ -1,5 +1,46 @@
 [
 	{
+		"id": "_mu6BWsnaPM",
+		"type": "youtube",
+		"summary": "<b>Uri Goldshtein</b> gives an enthusiastic talk on using angular-meteor and demos a basic \"party\" application.",
+		"tags": [
+			"Angular.js",
+			"Meteor"
+		]
+	},
+	{
+		"id": "OE02JXX1VEM",
+		"type": "youtube",
+		"summary": "<b>Jafar Husain</b> and <b>Michael Paulson</b> of Netflix show off Falcor, an innovative data access layer which challenges traditional MVC architecture.",
+		"tags": [
+			"Angular.js",
+			"Falcor",
+			"Node",
+			"Netflix"
+		]
+	},
+	{
+		"id": "Nk9rbcWuYcE",
+		"type": "youtube",
+		"summary": "<b>Merrick Christensen</b> explains how dependency injection works in Angular 2.0 and shows us some neat code snippets.",
+		"tags": [
+			"Angular.js",
+			"Dependency Injection",
+			"DI"
+		]
+	},
+	{
+		"id": "Bm3eDgZZMFs",
+		"type": "youtube",
+		"summary": "<b>Jeff Cross</b> & <b>Alex Rickabaugh</b> explain best practices for architecting Angular applications. <br/><br/> <b>Jafar Husain</b> makes a cameo to explain usage of Observables in ES6.",
+		"tags": [
+			"Angular.js",
+			"Data Structure",
+			"Architecture",
+			"Observables"
+		]
+	},
+	{
 		"id": "kKj00HzElbk",
 		"type": "youtube",
 		"summary": "<b>Yunong Xiao</b> of Netflix discusses several strategies on logging for Node.js Applications.",
@@ -41,26 +82,6 @@
 		]
 	},
 	{
-		"id": "_mu6BWsnaPM",
-		"type": "youtube",
-		"summary": "<b>Uri Goldshtein</b> gives an enthusiastic talk on using angular-meteor and demos a basic \"party\" application.",
-		"tags": [
-			"Angular.js",
-			"Meteor"
-		]
-	},
-	{
-		"id": "OE02JXX1VEM",
-		"type": "youtube",
-		"summary": "<b>Jafar Husain</b> and <b>Michael Paulson</b> of Netflix show off Falcor, an innovative data access layer which challenges traditional MVC architecture.",
-		"tags": [
-			"Angular.js",
-			"Falcor",
-			"Node",
-			"Netflix"
-		]
-	},
-	{
 		"id": "pgFtp2LgwoE",
 		"type": "youtube",
 		"summary": "<b>Martin Gonto</b> outlines JSON-token based authentication strategy for Angular 2 applications with a live code demo.",
@@ -69,27 +90,6 @@
 			"Auth",
 			"Tokens",
 			"Auth0"
-		]
-	},
-	{
-		"id": "Nk9rbcWuYcE",
-		"type": "youtube",
-		"summary": "<b>Merrick Christensen</b> explains how dependency injection works in Angular 2.0 and shows us some neat code snippets.",
-		"tags": [
-			"Angular.js",
-			"Dependency Injection",
-			"DI"
-		]
-	},
-	{
-		"id": "Bm3eDgZZMFs",
-		"type": "youtube",
-		"summary": "<b>Jeff Cross</b> & <b>Alex Rickabaugh</b> give a weird but extremely useful talk on recommended architecture patterns of Angular applications. <br/> <b>Jafar Husain</b> makes a cameo to explain usage of Observables in ES6.",
-		"tags": [
-			"Angular.js",
-			"Data Structure",
-			"Architecture",
-			"Observables"
 		]
 	}
 ]
