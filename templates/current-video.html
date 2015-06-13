@@ -42,13 +42,12 @@
 	<i class="refresh-icon text-primary glyphicon glyphicon-refresh"></i>
 </div>
 
-<div ng-hide="hideVideo" class="embed-responsive embed-responsive-4by3">
+<div ng-hide="hideVideo" class="embed-responsive embed-responsive-16by9">
 	<iframe
-		ng-if="embedUrl"
-		width="560"
-		height="315" 
+		class="embed-responsive-item"
+		ng-if="embedUrl" 
 		ng-src="{{ embedUrl }}" 
-		frameborder="0" 
+		frameborder="0"
 		allowfullscreen>
 	</iframe>
 	<div class="muted text-center">
