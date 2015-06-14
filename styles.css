@@ -1,0 +1,70 @@
+/*********************************************** 
+			Talk list 
+***********************************************/
+.list-group-item {
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	-o-transition: background 0.1s ease-in-out;
+	transition: background 0.1s ease-in-out;
+}
+
+/*********************************************** 
+			Current Video 
+***********************************************/
+.embed-responsive {
+	-webkit-transition: all 2s linear;
+	-moz-transition: all 2s linear;
+	-o-transition: all 2s linear;
+	transition: all 2s linear;
+}
+.embed-responsive.ng-hide {
+	opacity: 0; 
+}
+.refresh-icon {
+	margin-top: 30%;
+	font-size: 7em;
+	-webkit-animation-name: spin;
+	-webkit-animation-duration: 1000ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spin;
+	-moz-animation-duration: 1000ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-ms-animation-name: spin;
+	-ms-animation-duration: 1000ms;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.current-video {
+	position: fixed;
+	width: 45%;
+}
+
+@media (max-width: 1000px) {
+	.current-video {
+		position: relative;
+		width: 50%;
+		max-width: 600px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.current-video {
+		width: 60%;
+		max-width: 600px;
+	}
+}
