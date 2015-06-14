@@ -22,6 +22,19 @@
 			class="list-group-item-text" 
 			ng-bind-html="parseSummary(talk.summary)">
 		</div>
+
+		<div 
+			class="pull-right"
+			ng-repeat="tag in talk.tags">
+
+			<span 
+				class="label" 
+				ng-class="{ 'label-warning': currentTalk.id === talk.id, 'label-primary': currentTalk.id !== talk.id }">
+				{{ tag }}
+			</span>
+			&nbsp;&nbsp;
+
+		</div>
 	</a>
 
 </div>
