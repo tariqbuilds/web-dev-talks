@@ -7,8 +7,6 @@
 	}
 </style>
 
-<span ng-init="talkListLimit = 3"></span>
-
 <div class="list-group">
   	<a
   		class="list-group-item row"
@@ -25,7 +23,7 @@
 		class="list-group-item row" 
 		ng-class="{ 'active': currentTalk.id === talk.id }"
 		ng-click="changeCurrentTalk($index)" 
-		ng-repeat="talk in talks | filter:searchText | limitTo: talkListLimit">
+		ng-repeat="talk in talks | filter:searchText">
 		
 		<img class="pull-left img img-polaroid col-md-4" ng-src="{{ getThumbnail(talk.id) }}">
 
@@ -34,22 +32,5 @@
 			ng-bind-html="parseSummary(talk.summary)">
 		</div>
 	</a>
-	
-	<div 
-		class="list-group-item row text-center"
-  		ng-class="{ 'has-warning': searchText.length }">
-		
-		<span>
-			Showing {{ talkListLimit }} of {{ talks.length }}	
-		</span>
-
-		<button 
-			class="btn btn-xs bt-default pull-right" 
-			ng-click="talkListLimit = talkListLimit + 3"
-			ng-disabled="talkListLimit >= talks.length">
-			Load More
-		</button>
-
-	</div>
 
 </div>
