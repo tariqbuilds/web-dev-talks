@@ -58,8 +58,8 @@ app.directive('talkList', function ($sce, Data, $firebaseArray) {
 
 			scope.parseSummary = Data.parseTalkSummaryAsHTML;
 
-			scope.changeCurrentTalk = function (index) {
-				scope.currentTalk = scope.talks[index];
+			scope.changeCurrentTalk = function (id) {
+				scope.currentTalk = scope.talks[id];
 			};
 
 			scope.getThumbnail = Data.getThumbnail;
