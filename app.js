@@ -68,7 +68,6 @@ app.directive('talkList', function ($sce, Data, $firebaseArray) {
 			scope.talks 		= $firebaseArray(firebaseRef);
 			
 			scope.talks.$loaded(function (talks) {
-				console.log(talks[0]);
 				scope.currentTalk = talks[0];
 			})
 		}
