@@ -1,12 +1,6 @@
-var app = angular.module('webDevTalks', []);
+var app = angular.module('webDevTalks', ['firebase']);
 
-app.service('Data', function ($http, $sce) {
-	
-	this.getTalks = function () {
-		return $http.get('data.json').then(function (resp) {
-			return resp.data;
-		});
-	};
+app.service('Data', function ($http, $sce, $q, $firebaseArray) {
 
 	this.parseTalkSummaryAsHTML = function (summary) {
 		return $sce.trustAsHtml(summary);
@@ -56,14 +50,11 @@ app.directive('currentVideo', function ($sce, $timeout, Data) {
 	}
 });
 
-app.directive('talkList', function ($sce, Data) {
+app.directive('talkList', function ($sce, Data, $firebaseArray) {
 	return {
 		restrict: 'E',
 		templateUrl: 'templates/talk-list.html',
 		link: function (scope, el) {
-			var setCurrentTalk = function () {
-				scope.currentTalk = scope.talks[0];
-			};
 
 			scope.parseSummary = Data.parseTalkSummaryAsHTML;
 
@@ -73,10 +64,13 @@ app.directive('talkList', function ($sce, Data) {
 
 			scope.getThumbnail = Data.getThumbnail;
 
-			Data.getTalks().then(function (talks) {
-				scope.talks = talks;
-				setCurrentTalk();
-			});
+			var firebaseRef 	= new Firebase("https://web-dev-talks.firebaseio.com");
+			scope.talks 		= $firebaseArray(firebaseRef);
+			
+			scope.talks.$loaded(function (talks) {
+				console.log(talks[0]);
+				scope.currentTalk = talks[0];
+			})
 		}
 	}
 });
