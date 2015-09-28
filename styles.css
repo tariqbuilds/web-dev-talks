@@ -51,7 +51,9 @@
 
 .current-video {
 	position: fixed;
-	width: 45%;
+	min-width: 40%;
+	width: 650px;
+	margin-bottom: 50px;
 }
 
 @media (max-width: 1000px) {
